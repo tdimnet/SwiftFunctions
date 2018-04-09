@@ -13,21 +13,31 @@ let secondWidth: Int = 8
 
 let myFirstArea: Int = secondLength * secondWidth
 
-func area(length: Int, width: Int) -> Int {
+func areaWith(length: Int, width: Int) -> Int {
     let areaOfRoom: Int = length * width
     return areaOfRoom
 }
 
-let firstArea: Int = area(length: 10, width: 12)
-let secondArea: Int = area(length: 15, width: 22)
-let thirdArea: Int = area(length: 23, width: 5)
+let firstArea: Int = areaWith(length: 10, width: 12)
+let secondArea: Int = areaWith(length: 15, width: 22)
+let thirdArea: Int = areaWith(length: 23, width: 7)
 
 
 // func someFunction() {} === func someFunction() -> Void {}
 
 
+// Argument Labels
 
+func remove(havingValue value: String) {
+    print(value)
+}
 
+remove(havingValue: "A")
 
+// Functions Parameters
+func getRemainder(value a: Int, divisor b: Int) -> Int {
+    return a % b
+}
 
-
+let result: Int = getRemainder(value: 10, divisor: 3)
+print(result)
