@@ -41,3 +41,36 @@ func getRemainder(value a: Int, divisor b: Int) -> Int {
 
 let result: Int = getRemainder(value: 10, divisor: 3)
 print(result)
+
+
+// Default Values
+func carpetCostHaving(length: Int, width: Int, carpetColor color: String = "tan") -> Int {
+    // Gray carpet - $1/sq ft
+    // Tan carpet - $2/sq ft
+    // Deep Blue carpet - $4/sq ft
+    
+    let area = areaWith(length: length, width: width)
+    
+    var price: Int = 0
+    
+    switch color {
+    case "gray":
+        price = area * 1
+    case "tan":
+        price = area * 2
+    case "blue":
+        price = area * 4
+    default:
+        price = 0
+    }
+    
+    return price
+}
+
+carpetCostHaving(length: 5, width: 7, carpetColor: "blue")
+carpetCostHaving(length: 15, width: 27, carpetColor: "tan")
+carpetCostHaving(length: 15, width: 27)
+
+
+
+
