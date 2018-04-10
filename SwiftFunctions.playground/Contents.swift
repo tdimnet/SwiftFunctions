@@ -44,7 +44,7 @@ print(result)
 
 
 // Default Values
-func carpetCostHaving(length: Int, width: Int, carpetColor color: String = "tan") -> Int {
+func carpetCostHaving(length: Int, width: Int, carpetColor color: String = "tan") -> (price: Int, carpetColor: String) {
     // Gray carpet - $1/sq ft
     // Tan carpet - $2/sq ft
     // Deep Blue carpet - $4/sq ft
@@ -64,12 +64,29 @@ func carpetCostHaving(length: Int, width: Int, carpetColor color: String = "tan"
         price = 0
     }
     
-    return price
+    return (price, color)
 }
 
 carpetCostHaving(length: 5, width: 7, carpetColor: "blue")
 carpetCostHaving(length: 15, width: 27, carpetColor: "tan")
-carpetCostHaving(length: 15, width: 27)
+
+let resultInfo = carpetCostHaving(length: 15, width: 27)
+print(resultInfo.price)
+print(resultInfo.carpetColor)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
