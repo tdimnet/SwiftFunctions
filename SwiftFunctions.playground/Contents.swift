@@ -71,13 +71,39 @@ carpetCostHaving(length: 5, width: 7, carpetColor: "blue")
 carpetCostHaving(length: 15, width: 27, carpetColor: "tan")
 
 let resultInfo = carpetCostHaving(length: 15, width: 27)
-print(resultInfo.price)
-print(resultInfo.carpetColor)
 
 
+// Scope
+func arrayModifier(array: [Int]) {
+    var arrayOfInts: [Int] = array
+    arrayOfInts.append(5)
+    
+    var secondArray: [Int] = arrayOfInts
+}
+
+var arrayOfInts = [1, 2, 3, 4]
+arrayModifier(array: arrayOfInts)
+
+func someTest(_ test: Int) {
+    
+}
+someTest(4)
 
 
+func coordinates(for location: String) -> (Double, Double) {
+    switch location {
+    case "Eiffel Tower":
+        return (48.8582, 2.2945)
+    case "Great Pyramid":
+        return (29.9792, 31.1344)
+    case "Sydney Opera House":
+        return (33.8587, 151.2140)
+    default:
+        return (0, 0)
+    }
+}
 
+coordinates(for: "Eiffel Tower")
 
 
 
